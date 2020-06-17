@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const serverConfig = require("./config");
+const Routes = require("./routes");
 const app = express();
 
 app.use(bodyParser.json());
@@ -13,5 +14,7 @@ const setHeaders = (req, res, next) => {
   
   next();
 };
+
+app.use("/api", Routes);
 
 module.exports = app;
