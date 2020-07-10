@@ -7,6 +7,7 @@ router.use((req, res, next) => {
     next();
   });
   
-router.get("/sayhello", Controllers.HelloController.sayHello);
+router.post("/sayhello", Controllers.HelloController.sayHello);
+router.get("/getnginxlogs", Controllers.HelloController.getNginxLogs);
   
   module.exports = router;
