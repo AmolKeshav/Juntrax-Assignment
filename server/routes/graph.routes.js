@@ -12,5 +12,6 @@ router.use((req, res, next) => {
 });
 
 router.post("/findpaths", Controllers.GraphController.findPaths);
+router.get("/sayhello", Controllers.GraphController.sayHelloGraph);
 
 module.exports = router;

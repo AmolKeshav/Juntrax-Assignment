@@ -3,5 +3,7 @@
  */
 
 const GraphController = require("./graph.controllers");
+const ArrayController = require("./array.controllers");
+const HelloController = require("./hello.controllers");
 
-module.exports = { GraphController };
+module.exports = { GraphController, ArrayController, HelloController };

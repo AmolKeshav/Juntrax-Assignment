@@ -36,12 +36,14 @@ const onError = error => {
 const onListening = () => {
   let addr = server.address();
   let bind = typeof addr === "string" ? "pipe " + add : "port " + port;
-  console.log("Juntrax server is listening on " + bind);
+
+  console.log("Juntrax server is listening on " + bind + " A = 2, B = 3, A + B ", 3 + 2);
 };
 
-const port = normalizePort(process.env.SERVER_PORT || "9000");
+const port = normalizePort(process.env.SERVER_PORT || "9001");
 const server = http.createServer(app);
 
 server.on('error', onError);
 server.on('listening', onListening);
+
 server.listen(port);

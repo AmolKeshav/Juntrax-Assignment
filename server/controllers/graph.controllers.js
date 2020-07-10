@@ -15,5 +15,14 @@ module.exports = {
         paths: graph.paths
       }
     });
+  },
+  
+  sayHelloGraph: (req, res) => {
+    res.status(200).json({
+      message: "hello to graphs found!",
+      data: {
+        
+      }
+    });
   }
 }
